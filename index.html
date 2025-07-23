@@ -676,6 +676,161 @@
             font-size: 1.1rem;
         }
 
+        /* Pricing */
+        .pricing {
+            background-color: var(--light-gray);
+            position: relative;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .pricing-card {
+            background: var(--lighter);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-xl);
+            border: 3px solid var(--primary);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: 15px;
+            right: -30px;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 30px;
+            font-weight: 700;
+            transform: rotate(45deg);
+            font-size: 0.85rem;
+        }
+
+        .pricing-header {
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 15px 0;
+            color: var(--primary);
+        }
+
+        .price span {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+        .pricing-header p {
+            color: var(--gray);
+            margin-bottom: 0;
+        }
+
+        .pricing-features {
+            padding: 30px;
+        }
+
+        .pricing-features ul {
+            margin: 0;
+        }
+
+        .pricing-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            color: var(--dark);
+        }
+
+        .pricing-features i {
+            color: var(--primary);
+            margin-top: 3px;
+        }
+
+        .pricing-footer {
+            padding: 20px 30px;
+            text-align: center;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .pricing-footer p {
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .pricing-notes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .note-box {
+            background: var(--lighter);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .note-box h4 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .note-box h4 i {
+            font-size: 1.5rem;
+        }
+
+        .note-box ol {
+            padding-left: 20px;
+        }
+
+        .note-box ol li {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .note-box ol li strong {
+            color: var(--darker);
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-notes {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Testimonials */
         .testimonials {
             position: relative;
@@ -1575,6 +1730,114 @@
         </div>
     </section>
 
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Planes y <span class="text-gradient">Precios Competitivos</span></h2>
+                <p>Paquetes completos diseñados para cada etapa de crecimiento de tu negocio</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Basic Package -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Paquete Básico</h3>
+                        <div class="price">$799<span>/mes</span></div>
+                        <p>Perfecto para negocios que comienzan su presencia digital</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Sitio web básico (5 páginas)</li>
+                            <li><i class="fas fa-check"></i> Diseño responsive</li>
+                            <li><i class="fas fa-check"></i> Formulario de contacto</li>
+                            <li><i class="fas fa-check"></i> SEO básico (10 palabras clave)</li>
+                            <li><i class="fas fa-check"></i> 2 publicaciones en redes sociales/semana</li>
+                            <li><i class="fas fa-check"></i> 1 video corto/mes</li>
+                            <li><i class="fas fa-check"></i> Reporte mensual básico</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <p>ROI estimado: 150-200% en 6 meses</p>
+                        <a href="#contact" class="btn btn-outline">Contratar Ahora</a>
+                    </div>
+                </div>
+                
+                <!-- Professional Package -->
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Más Popular</div>
+                    <div class="pricing-header">
+                        <h3>Paquete Profesional</h3>
+                        <div class="price">$1,499<span>/mes</span></div>
+                        <p>Ideal para negocios en crecimiento con necesidades avanzadas</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Todo en el Paquete Básico +</li>
+                            <li><i class="fas fa-check"></i> Sitio web premium (10-15 páginas)</li>
+                            <li><i class="fas fa-check"></i> Blog integrado (2 artículos/mes)</li>
+                            <li><i class="fas fa-check"></i> SEO avanzado (25 palabras clave)</li>
+                            <li><i class="fas fa-check"></i> Campañas de Google Ads ($300/mes incluidos)</li>
+                            <li><i class="fas fa-check"></i> 4 publicaciones en redes sociales/semana</li>
+                            <li><i class="fas fa-check"></i> 2 videos profesionales/mes</li>
+                            <li><i class="fas fa-check"></i> Sesión fotográfica cada 2 meses</li>
+                            <li><i class="fas fa-check"></i> Reporte analítico detallado</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <p>ROI estimado: 250-350% en 6 meses</p>
+                        <a href="#contact" class="btn">Contratar Ahora</a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Package -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Paquete Empresarial</h3>
+                        <div class="price">$2,999<span>/mes</span></div>
+                        <p>Solución completa para empresas con alto crecimiento</p>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Todo en el Paquete Profesional +</li>
+                            <li><i class="fas fa-check"></i> Sitio web corporativo (20+ páginas)</li>
+                            <li><i class="fas fa-check"></i> E-commerce básico (hasta 50 productos)</li>
+                            <li><i class="fas fa-check"></i> SEO completo (50+ palabras clave)</li>
+                            <li><i class="fas fa-check"></i> Campañas de Google & Facebook Ads ($600/mes incluidos)</li>
+                            <li><i class="fas fa-check"></i> Publicaciones diarias en redes sociales</li>
+                            <li><i class="fas fa-check"></i> 4 videos profesionales/mes</li>
+                            <li><i class="fas fa-check"></i> Sesión fotográfica mensual</li>
+                            <li><i class="fas fa-check"></i> Email marketing (2 campañas/mes)</li>
+                            <li><i class="fas fa-check"></i> Reporte ejecutivo con análisis de competencia</li>
+                            <li><i class="fas fa-check"></i> Reunión estratégica mensual</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <p>ROI estimado: 400-500% en 6 meses</p>
+                        <a href="#contact" class="btn btn-outline">Contratar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing-notes">
+                <div class="note-box">
+                    <h4><i class="fas fa-lightbulb"></i> ¿Cómo calculamos tu ROI?</h4>
+                    <p>Nuestros clientes típicos ven un retorno de inversión entre 150% y 500% en 6-12 meses. Esto se calcula comparando el aumento en ventas/conversiones con la inversión en marketing. Por ejemplo, si inviertes $1,500/mes y generas $5,000 adicionales en ventas, tu ROI sería del 233%.</p>
+                </div>
+                <div class="note-box">
+                    <h4><i class="fas fa-cogs"></i> Proceso de Trabajo</h4>
+                    <ol>
+                        <li><strong>Análisis:</strong> Evaluamos tu negocio y competencia</li>
+                        <li><strong>Estrategia:</strong> Creamos un plan personalizado</li>
+                        <li><strong>Implementación:</strong> Desarrollamos tu presencia digital</li>
+                        <li><strong>Optimización:</strong> Ajustamos continuamente para mejores resultados</li>
+                        <li><strong>Reportes:</strong> Medimos y mostramos tu crecimiento</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
@@ -2230,5 +2493,5 @@
             });
         }
     </script>
-</body>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=marlon2000/marlonfotoscr" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
 </html>
