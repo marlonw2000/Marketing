@@ -1154,6 +1154,113 @@
             }
         }
 
+        /* Blog Section */
+        .blog-section {
+            background-color: var(--light-gray);
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .blog-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .blog-image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: auto;
+            transition: var(--transition);
+        }
+
+        .blog-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .blog-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--darker);
+        }
+
+        .blog-text p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .blog-features {
+            margin: 30px 0;
+        }
+
+        .blog-features li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .blog-features i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .case-study {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+            background: var(--lighter);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+        }
+
+        .case-study h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .case-study ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .case-study li {
+            margin-bottom: 10px;
+            color: var(--dark-gray);
+        }
+
+        .blog-cta {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            padding: 40px;
+            border-radius: var(--radius-md);
+            color: white;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .blog-cta h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-cta p {
+            color: rgba(255,255,255,0.9);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
         /* Responsive */
         @media (max-width: 1200px) {
             .hero h1 {
@@ -1316,7 +1423,7 @@
                 <li><a href="#" class="active"><i class="fas fa-bullseye"></i> Marketing</a></li>
                 <li><a href="#services"><i class="fas fa-concierge-bell"></i> Servicios</a></li>
                 <li><a href="#"><i class="fas fa-briefcase"></i> Portafolio</a></li>
-                <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="#blog" class="blog-link"><i class="fas fa-blog"></i> Blog</a></li>
                 <li><a href="#contact" class="btn btn-outline btn-sm"><i class="fas fa-paper-plane"></i> Contacto</a></li>
             </ul>
         </div>
@@ -1487,8 +1594,8 @@
                                             <img src="https://i.ibb.co/PVYLsqT/6e5ee1ff04e3025717f72941657d0a91.jpg" alt="Dra. Laura Martinez">
                                         </div>
                                         <div class="author-info">
-                                            <h4>Dra. Laura Martinez</h4>
-                                            <p>Ginecóloga y Oncóloga</p>
+                                            <h4>Dra. Michelle Wright</h4>
+                                            <p>Especialista en Ginecología y Oncología</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -1510,8 +1617,8 @@
                                             <img src="https://i.ibb.co/S40NSMb1/Beauty-Plus-20250720013423318-save.jpg" alt="Dr. Carlos Rodriguez">
                                         </div>
                                         <div class="author-info">
-                                            <h4>Dr. Carlos Rodriguez</h4>
-                                            <p>Médico General</p>
+                                            <h4>Dra. Katherine Farguharson</h4>
+                                            <p>Medicina y Cirugía General</p>
                                             <div class="rating">
                                                 <i class="fas fa-star"></i>
                                                 <i class="fas fa-star"></i>
@@ -1549,6 +1656,66 @@
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>El Poder del <span class="text-gradient">Marketing Digital</span> Hoy</h2>
+                <p>Descubre cómo el marketing digital está transformando negocios en la era actual</p>
+            </div>
+            
+            <div class="blog-content">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Marketing Digital">
+                </div>
+                
+                <div class="blog-text">
+                    <h3>¿Por qué el Marketing Digital es Esencial en 2024?</h3>
+                    <p>En la era digital actual, tener una estrategia de marketing efectiva ya no es opcional, es una necesidad de supervivencia para cualquier negocio. El marketing digital ha revolucionado la forma en que las empresas se conectan con sus clientes, ofreciendo:</p>
+                    
+                    <ul class="blog-features">
+                        <li><i class="fas fa-check-circle"></i> <strong>Alcance global:</strong> Llega a clientes en cualquier parte del mundo</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Segmentación precisa:</strong> Dirígete exactamente a tu audiencia ideal</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>ROI medible:</strong> Cada dólar invertido puede ser rastreado y optimizado</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Interacción 24/7:</strong> Tu negocio nunca cierra en el mundo digital</li>
+                    </ul>
+                    
+                    <h3>Una Historia de Transformación Real</h3>
+                    <p>Hace un año, una pequeña clínica dental local estaba a punto de cerrar sus puertas. Con solo 5-10 pacientes nuevos por mes, los ingresos no cubrían los costos. Decidieron invertir en una estrategia integral de marketing digital que incluía:</p>
+                    
+                    <div class="case-study">
+                        <div class="case-before">
+                            <h4>Antes:</h4>
+                            <ul>
+                                <li>Página web obsoleta sin SEO</li>
+                                <li>Presencia inconsistente en redes sociales</li>
+                                <li>0% de pacientes provenientes de canales digitales</li>
+                                <li>Presupuesto de marketing: $0</li>
+                            </ul>
+                        </div>
+                        <div class="case-after">
+                            <h4>Después (6 meses):</h4>
+                            <ul>
+                                <li>Sitio web optimizado con blog educativo</li>
+                                <li>Campañas de Google Ads y Facebook Ads</li>
+                                <li>80% de pacientes nuevos de fuentes digitales</li>
+                                <li>ROI de 450% en inversión en marketing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p>Hoy, esa misma clínica tiene una lista de espera de 3 semanas y ha podido expandirse a un local más grande. Esta transformación fue posible gracias al poder del marketing digital bien ejecutado.</p>
+                    
+                    <div class="blog-cta">
+                        <h3>¿Listo para Transformar Tu Negocio?</h3>
+                        <p>El marketing digital no es solo para grandes corporaciones. Pequeños negocios y profesionales independientes están obteniendo resultados extraordinarios con las estrategias adecuadas.</p>
+                        <a href="#contact" class="btn btn-secondary">Quiero Mi Estrategia Personalizada <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2018,6 +2185,18 @@
                     ease: "power2.out"
                 });
             });
+        });
+
+        // Blog section animation
+        gsap.from('.blog-content', {
+            scrollTrigger: {
+                trigger: '.blog-section',
+                start: "top 70%",
+                toggleActions: "play none none none"
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1
         });
 
         // Animate stats counter
